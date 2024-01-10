@@ -13,11 +13,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.daggerhilt.ui.theme.DaggerHiltTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     @Inject
+    @Named("firebase")
     lateinit var userRepository: UserRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {

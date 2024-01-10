@@ -34,4 +34,12 @@ object from the activity class also. But if,
 i define the module as fragment component than i cannot request for the creation of the object from the
 activity/application class because it will not know how to create the object.
 
+#@Binds Annotation ->
+* Whenever we need to bind an interface with an implementation, we use the @Binds annotation.
+* The functions are abstract because we need no implementation as the object can be created by Hilt itself.
+
+#Qualifiers
+* Qualifiers are like tag, which are used to remove the ambiguity.
+* They are used when we have multiple implementation of the same type.
+
  */
