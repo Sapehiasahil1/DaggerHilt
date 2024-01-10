@@ -5,9 +5,11 @@ import javax.inject.Inject
 
 const val TAG = "SahilSapehia"
 
-class UserRepository @Inject constructor() {
+ //This is constructor injection because here the UserRepository class depends upon the loggerService
+ // and loggerService is passed in the constructor of the class
+class UserRepository @Inject constructor(val loggerService: LoggerService) {
 
     fun saveUser(email: String, password: String) {
-        Log.d(TAG, "User saved in DB")
+        loggerService.log("User saved in DB")
     }
 }
