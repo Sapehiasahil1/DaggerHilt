@@ -23,11 +23,9 @@ implementation is not known, so what object we need to return to the call.
     1. SingletonComponent -> Application
     2. ActivityComponent -> Activity
     3. FragmentComponent -> Fragment
-
 * Component are the interfaces. The different component refers to the scope of that compnent i.e.
 the modules in the activity component will create the objects that will be singleton(means one instance
  of the object) for that particular activity.
-
 * The modules defined in the parent component can be used by the below components but vice versa is not
 possible. Example if i define the module as singleton component, than i can request for the creation of the
 object from the activity class also. But if,
@@ -42,4 +40,13 @@ activity/application class because it will not know how to create the object.
 * Qualifiers are like tag, which are used to remove the ambiguity.
 * They are used when we have multiple implementation of the same type.
 
+#Singleton
+* This annotation is used on the class to only create a single object/instance in the entire application.
+
+#Scope
+    1. Application -> Singleton (Single object for entire application)
+    2. Activity -> ActivityScoped (Single object for activity)
+    3. Fragment -> FragmentScoped (Single object for fragment)
+
+   * These can be used on the classes as well on the functions of the modules
  */

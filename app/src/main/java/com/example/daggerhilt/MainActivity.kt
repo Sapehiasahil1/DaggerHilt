@@ -22,6 +22,12 @@ class MainActivity : ComponentActivity() {
     @Named("firebase")
     lateinit var userRepository: UserRepository
 
+    @Inject
+    lateinit var loggerService1: LoggerService
+
+    @Inject
+    lateinit var loggerService2: LoggerService
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
